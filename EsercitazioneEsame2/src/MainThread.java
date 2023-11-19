@@ -24,12 +24,19 @@ public class MainThread implements Runnable {
         this.frame = frame;
         try {
             this.socket = new Socket(host, port);
-            frame.connect.setEnabled(false);
-            frame.disconnect.setEnabled(true);
-            frame.start.setEnabled(true);
         } catch (IOException e) {
             logger.severe("Error while connecting to the server: " + e.getMessage());
         }
+        frame.connect.setEnabled(false);
+        frame.disconnect.setEnabled(true);
+        frame.start.setEnabled(true);
+        try {
+            scanner = new Scanner(socket.getInputStream());
+            writer = new PrintWriter(socket.getOutputStream(), true);
+        } catch (IOException e) {
+            logger.severe("Error while getting the I/O stream: " + e.getMessage());
+        }
+
     }
 
     @Override
