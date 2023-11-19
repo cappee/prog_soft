@@ -7,3 +7,7 @@ Weekly exercises assigned by Prof. Paolo Liberatore for the course "Progettazion
 ## Esercitazioni
 - [Swing](EsercitazioneSwing) (10 ottobre 2023)
 - [Socket](EsercitazioneSocket) (17 ottobre 2023)
+- [File](EsercitazioneFile) (24 ottobre 2023)
+- [Thread](EsercitazioneThread) (7 novembre 2023)
+- [Downloader [esame]](EsercitazioneEsame) (14 novembre 2023)
+- [Bandiere [esame]](EsercitazioneEsame2) (21 novembre 2023)

@@ -9,3 +9,6 @@ server rilasciato dal docente è possibile trovarlo [qui](http://diag.uniroma1.i
 - [x] Ascoltatori (ActionListener)
 - [x] Logger
 - [x] Thread (concurrency)
+
+## Screenshot
+![Screenshot](https://i.imgur.com/DgGoWlI.png)
