@@ -5,8 +5,8 @@ import java.util.concurrent.Executors;
 
 public class MainListener implements ActionListener {
 
-    MainFrame frame;
-    MainThread runnable;
+    private final MainFrame frame;
+    private MainThread runnable;
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     public MainListener(MainFrame frame) {

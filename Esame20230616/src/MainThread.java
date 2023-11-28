@@ -7,10 +7,9 @@ import java.util.Scanner;
 
 public class MainThread implements Runnable {
 
-    MainFrame frame;
-    Socket socket;
-    Scanner scanner;
-    PrintWriter writer;
+    private final MainFrame frame;
+    private Socket socket;
+    private PrintWriter writer;
 
     public MainThread(MainFrame frame) {
         this.frame = frame;
@@ -30,6 +29,7 @@ public class MainThread implements Runnable {
 
     @Override
     public void run() {
+        Scanner scanner;
         try {
             scanner = new Scanner(socket.getInputStream());
             writer = new PrintWriter(socket.getOutputStream(), true);
@@ -55,6 +55,8 @@ public class MainThread implements Runnable {
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             if (line.equals("END")) {
+                frame.disconnect.setEnabled(true);
+                frame.get.setEnabled(true);
                 break;
             } else if (line.equals("ERROR")) {
                 disconnect();
@@ -70,8 +72,6 @@ public class MainThread implements Runnable {
                 }
             }
         }
-        frame.disconnect.setEnabled(true);
-        frame.get.setEnabled(true);
     }
 
     public void disconnect() {

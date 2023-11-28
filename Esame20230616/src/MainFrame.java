@@ -3,17 +3,17 @@ import java.awt.*;
 
 public class MainFrame extends JFrame {
 
-    JTextField host = new JTextField(12);
-    JTextField port = new JTextField("4400",5);
-    JButton connect = new JButton("Connect");
-    JButton disconnect = new JButton("Disconnect");
+    protected JTextField host = new JTextField(12);
+    protected JTextField port = new JTextField("4400",5);
+    protected JButton connect = new JButton("Connect");
+    protected JButton disconnect = new JButton("Disconnect");
 
-    JButton[][] pixels = new JButton[5][5];
-    JTextArea log = new JTextArea(5, 18);
+    private final JButton[][] pixels = new JButton[5][5];
+    protected JTextArea log = new JTextArea(5, 18);
 
-    JTextField numero = new JTextField(10);
-    JButton get = new JButton("Get");
-    JButton reset = new JButton("Reset");
+    protected JTextField numero = new JTextField(10);
+    protected JButton get = new JButton("Get");
+    protected JButton reset = new JButton("Reset");
 
     public MainFrame() {
         super("Gabriele Cappellaro 2044279");
